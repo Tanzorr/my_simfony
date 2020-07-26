@@ -21,16 +21,14 @@ class DefaultController extends AbstractController
     }
 
     /**
-     * @Route("/", name="default")
+     * @Route("/home", name="home")
      */
     public function index(GiftServices $gifts, Request $request)
     {
         $users = [];
         $users= $this->getDoctrine()->getRepository(User::class)->findAll();
 
-
-
-
+        $entityManager =$this->getDoctrine()->getManager();
         return $this->render('default/index.html.twig',[
             'controller_name'=>'DefaultController',
             'users'=>$users,
@@ -38,6 +36,9 @@ class DefaultController extends AbstractController
 
         ]);
     }
+
+
+
 
     /**
      * @Route("/generate-url/{param?}",name="generate-url")

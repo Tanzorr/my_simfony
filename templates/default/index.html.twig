@@ -1,7 +1,8 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}Hello DefaultController!{% endblock %}
-
+{% set users = [{name:'john'},{name:'Susan'},{name:'Robert'},{name:'John'}] %}
+{% set string ="some string \n from \n databse" %}
 {% block body %}
 <style>
     .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
@@ -9,7 +10,7 @@
 </style>
 
 <div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+    <h1>Hello {{ controller_name|upper }}! ✅</h1>
 
     This friendly message is coming from:
     <ul>
@@ -21,6 +22,15 @@
             <li>{{ user.name }} -you won {{ random_gift[loop.index0] }}</li>
         {% endfor %}
     </ul>
+
+    <p>The google tracking code is: {{ ga_code }}</p>
+{{ path('home') }}
+    {% for user in users %}
+        <p>{{ user.name }}</p>
+    {% endfor %}
+
+
+
     {% for label, messages in app.flashes('notice') %}
         {% for message in messages %}
         <div class="flash-notice">

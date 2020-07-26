@@ -1,0 +1,29 @@
+{
+  "name": "my_simfony",
+  "version": "1.0.0",
+  "description": "simfony lesons",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tanzorr/my_simfony.git"
+  },
+  "keywords": [
+    "simfony"
+  ],
+  "author": "Alex Tukhovlskyi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tanzorr/my_simfony/issues"
+  },
+  "homepage": "https://github.com/Tanzorr/my_simfony#readme",
+  "devDependencies": {
+    "@symfony/webpack-encore": "^0.30.2"
+  },
+  "dependencies": {
+    "jquery": "^3.5.1",
+    "save": "^2.4.0"
+  }
+}
